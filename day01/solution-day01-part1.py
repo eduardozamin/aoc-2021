@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 import numpy as np
+from pathlib import Path
 
-with open("input-e01") as f:
+with open(Path(__file__).parent / "input-day01") as f:
     data = f.read()
 
 all_numbers = [int(x) for x in data.split()]
