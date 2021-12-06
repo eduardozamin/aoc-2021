@@ -8,24 +8,18 @@ follows the project layout recommendation from https://github.com/golang-standar
 
 ## Environment Setup
 
-Make sure your GOPROXY is set, otherwise "go get" will be very slow:
-```
-export GOPROXY="https://proxy.golang.org"
-```
-
-Then:
 ```
 # install global dependencies
 scripts/setup-dev.sh
+
+# run tests
+go test -v ./...
 
 # create binary output
 go build
 
 # run
 ./aoc-2021 --help
-
-# alternatively you can execute it using "go run"
-go run main.go --help
 ```
 
 ## Executing the solutions
@@ -35,14 +29,14 @@ in `internal/pkg/`.
 
 The input files are expected to be found at `input/input-day<XX>`
 
-To run the solution for day05 for example you have to run:
+To run the solution for day04 for example you have to run:
 ```
 # using "go run"
-go run main.go day05
+go run main.go solve day04
 
 # or via build + execution
 go build
-./aoc-2021 day05
+./aoc-2021 solve day04
 ```
 
-The results are simply displayed in stdout.
+The results are displayed in stdout.
